@@ -1,0 +1,7 @@
+@componets;
+
+@layer {
+    body {
+       @apply bg-slate-900
+    }
+}
