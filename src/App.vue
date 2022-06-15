@@ -1,14 +1,11 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from "vue-router"
+import Footer from "./components/Footer.vue"
+import Navbar from "./components/Navbar.vue"
 </script>
 
 <template>
-  <nav>
-    <RouterLink to="/">Domů</RouterLink>
-    <RouterLink to="/o-nas">O nás</RouterLink>
-    <RouterLink to="/faq">FAQ</RouterLink>
-    <RouterLink to="/pravidla">Pravidla</RouterLink>
-  </nav>
-
+  <Navbar/>
   <RouterView />
+  <Footer/>
 </template>

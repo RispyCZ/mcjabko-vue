@@ -2,6 +2,6 @@
 
 @layer {
     body {
-       @apply bg-slate-900
+       @apply bg-sky-800 text-yellow-50
     }
 }
