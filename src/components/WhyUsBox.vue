@@ -1,5 +1,5 @@
 <template>
-    <div class="p-4 rounded-2xl bg-mcj-red bg-opacity-120 shadow-lg">
+    <div class="p-4 rounded-2xl bg-mcj-red bg-opacity-120 shadow-xl shadow-black">
         <component :is="icon" class="block text-7xl mx-auto my-5 text-center"></component>
         <h4 class="text-3xl font-bold text-center">{{ title }}</h4>
         <p class="text-xl">

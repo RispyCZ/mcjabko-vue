@@ -9,7 +9,7 @@
         </h2>
     </div>
     <!-- Page Content -->
-    <div class="bg-slate-900 p-10 text-xl w-4/5 my-10 mx-auto">
+    <div class="bg-slate-900 shadow-lg shadow-black p-5 lg:p-10 text-xl lg:w-4/5 lg:my-10 mx-auto">
         <slot name="content"></slot>
     </div>
 </template>

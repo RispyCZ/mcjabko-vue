@@ -83,7 +83,7 @@
 <style>
 h3 {
     margin-top: 2rem;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: bold;
     color: #d9534f;
 }

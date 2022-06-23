@@ -24,6 +24,9 @@ const router = createRouter({
       component: () => import("../views/FaqView.vue")
     }
   ],
+  scrollBehavior (to, from, savePosition) {
+    return {top: 0}
+  }
 });
 
 export default router;

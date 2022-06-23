@@ -1,6 +1,6 @@
 <template>
     <!-- Navbar -->
-    <nav class="fixed top-0 left-0 right-0 py-5 px-10 bg-slate-900 grid grid-cols-[1fr,1fr] md:grid-cols-[.1fr,1fr] items-center">
+    <nav class="fixed top-0 left-0 right-0 py-5 px-10 grid grid-cols-[1fr,1fr] md:grid-cols-[.1fr,1fr] items-center" :class="windowTop <= 50 ? 'bg-trasparent' : 'bg-slate-900 shadow-lg shadow-black'">
         <RouterLink to="/"><img src="https://cdn.mcjabko.cz/images/logo.png" height="64" width="60" /></RouterLink>
         <button @click="handleClick" class="md:hidden text-2xl">
             <format-align-right v-if="!active"></format-align-right>
@@ -22,6 +22,7 @@ export default {
     data() {
         return {
             active: false,
+            windowTop: 0,
             links: [
                 {
                     name: "Domů",
@@ -38,9 +39,24 @@ export default {
             ]
         }
     },
+    mounted() {
+        window.addEventListener("scroll", this.onScroll)
+    },
+    beforeDestroy() {
+        window.removeEventListener("scroll", this.onScroll)
+    },
+    watch: {
+        $route (to, from) {
+            this.active = false
+        }
+    },
     methods: {
         handleClick() {
             this.active = !this.active
+        },
+        onScroll(e: Event) {
+            this.windowTop = window.scrollY
+          
         }
     }
 }
